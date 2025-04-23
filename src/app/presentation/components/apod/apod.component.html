@@ -1,0 +1,15 @@
+@if (isLoading) {
+  <p>Loading .... </p>
+}@else {
+  @if (apod) {
+    <div class="card">
+      <img src="{{apod.url}}" class="card-img-top" alt="{{ apod.title }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ apod.title }}</h5>
+        <p class="card-text">{{ apod.explanation }}</p>
+      </div>
+    </div>
+  }@else {
+    <p>Error while loading data ....</p>
+  }
+}

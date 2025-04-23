@@ -1,0 +1,29 @@
+<div class="container-neo">
+  <h1 class="neo-title">Near Earth Objects</h1>
+<table class="table table-dark table-striped table-hover ">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Estimated Diameter</th>
+    <th scope="col">Potentially Hazardous</th>
+    <th scope="col">Relative Velocity</th>
+    <th scope="col">Miss Distance</th>
+  </tr>
+</thead>
+<tbody>
+  @for (dateGroup of processedData; track dateGroup.date) {
+    @for (asteroid of dateGroup.asteroids; track asteroid.id) {
+      <tr>
+        <td>{{ asteroid.id }}</td>
+        <td>{{ asteroid.name }}</td>
+        <td>{{ asteroid.diameter }}</td>
+        <td>{{ asteroid.isHazardous }}</td>
+        <td> {{ asteroid.velocity }}</td>
+        <td>{{ asteroid.distance }}</td>
+      </tr>
+  }
+}
+</tbody>
+</table>
+</div>
