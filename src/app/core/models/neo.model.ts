@@ -1,6 +1,3 @@
-// models/nasa/index.ts
-// Todos os modelos relacionados à API NASA NEO em um único arquivo
-
 export interface Neo {
   links: Links;
   element_count: number;
